@@ -1,6 +1,6 @@
 # Ignore build output
-/bin/
-/obj/
+bin/
+obj/
 /packages/
 *.user
 *.lock.json
@@ -13,17 +13,22 @@
 *.userprefs
 *.*sln.docstates
 
-# Test results
+# Test results and coverage
 /TestResults/
+*.coverage
+*.coveragexml
+*.trx
+*.testsettings
 
 # Logs
 *.log
+*.logs
 
-# Entity Framework migrations history
+# Entity Framework migrations history (если хотите – можно коммитить)
 /Migrations/
 *.dbmodel
 
-# SQLite database files
+# SQLite database files (ваша БД)
 *.db
 *.db3
 *.sqlite
@@ -31,24 +36,52 @@
 sibersDB.db
 /Database/*.db
 
-# User secrets
+# User secrets and sensitive data
 appsettings.Development.json
 appsettings.Production.json
 secrets.json
+*.pfx
+*.pem
+*secret*
+*key*
 
 # NuGet
 *.nupkg
 *.snupkg
+*.nuget.props
+*.nuget.targets
 
 # Publish output
 /publish/
+/out/
+/artifacts/
 
 # OS metadata
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # Benchmark results
 BenchmarkDotNet.Artifacts/
 
 # Local tool manifest
 .dotnet-tools.json
+
+# Temporary files
+*~
+*.tmp
+*.temp
+*.bak
+
+# ReSharper / JetBrains
+*.DotSettings
+*.DotSettings.user
+
+# Launch settings (personal – обычно не коммитят)
+/Properties/launchSettings.json
+
+# Profiling output
+*.perfview
+*.performance
+
+# Build output for tests (не нужно, но уже покрыто /bin/ /obj/)
